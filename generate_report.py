@@ -77,7 +77,7 @@ def create_report(file_path, email_data):
     df.to_csv(file_path, index=False)
 
 def main():
-    file_dir = r'C:\Users\pcric\OneDrive\Desktop\my_reports'
+    file_dir = r'C:\Desktop\my_reports' # Fix this path
     file_path = os.path.join(file_dir, 'daily_email_report.csv')
     if not os.path.exists(file_dir):
         os.makedirs(file_dir)

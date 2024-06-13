@@ -14,7 +14,7 @@ subject = 'Daily Email Report'
 body = 'Please find the attached daily email report.'
 
 # Path to the report
-file_path = r'C:\Users\pcric\OneDrive\Desktop\my_reports\daily_report.csv'
+file_path = r'C:\my_reports\daily_report.csv' # Fix this path
 
 def send_email(subject, body, to_email, from_email, password, file_path):
     # Create the email
