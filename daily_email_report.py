@@ -8,8 +8,7 @@ import os
 # Email configuration
 smtp_server = 'smtp.gmail.com'  # For Gmail
 smtp_port = 587
-sender_email = os.getenv('EMAIL_USER') # Fetching from environment variable
-receiver_email = 'recipient_email@example.com'
+sender_email, receiver_email = os.getenv('EMAIL_USER') # Fetching from environment variable / Only send to me
 password = os.getenv('EMAIL_PASS')  # Fetching from environment variable
 
 # Email content
@@ -17,7 +16,7 @@ subject = 'Daily Report'
 body = 'Please find the attached daily report.'
 
 # File to attach
-file_path = 'path/to/your/report.pdf'
+file_path = 'C:\Users\pcric\OneDrive\Desktop\email_report.pdf'
 
 def send_email(subject, body, to_email, from_email, password, file_path):
     # Create the email
