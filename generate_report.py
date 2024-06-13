@@ -10,9 +10,13 @@ username = os.getenv('EMAIL_USER')  # Fetching from environment variable
 password = os.getenv('EMAIL_PASS')  # Fetching from environment variable
 
 # Path to save the report
-file_path = 'C:\Users\pcric\OneDrive\Desktop\my_reports\daily_report.csv'
+file_dir = 'C:\Users\pcric\OneDrive\Desktop\my_reports'
+file_path = os.path.join(file_dir, 'daily_email_report.csv')
 
 def create_report(file_path):
+    # Ensure the directory exists
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    
     # Connect to the server
     imap = imaplib.IMAP4_SSL("imap.gmail.com")
 
