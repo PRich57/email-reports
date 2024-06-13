@@ -55,5 +55,7 @@ def send_email(subject, body, to_email, from_email, password, file_path):
     server.quit()
     print(f'Email sent to {to_email} successfully.')
 
+create_report(file_path)
+
 # Send the email
 send_email(subject, body, receiver_email, sender_email, password, file_path)
