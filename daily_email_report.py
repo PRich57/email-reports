@@ -8,7 +8,7 @@ import os
 # Email configuration
 smtp_server = 'smtp.gmail.com'  # For Gmail
 smtp_port = 587
-sender_email = 'your_email@gmail.com'
+sender_email = os.getenv('EMAIL_USER') # Fetching from environment variable
 receiver_email = 'recipient_email@example.com'
 password = os.getenv('EMAIL_PASS')  # Fetching from environment variable
 
